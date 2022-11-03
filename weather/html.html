@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Title</title>
+  
+<link rel="stylesheet" href="../weather/css.css">
+
+</head>
+<body>
+
+  
+
+  <!-- <div class="api">  
+  </div>
+  -->
+  <section class="top-banner">
+    <div class="container">
+      <h1 class="heading" style="font-size: 25px;">Know weather</h1>
+      <form>
+        <input type="text" placeholder="Search for a city" autofocus>
+        
+        <button type="submit">SUBMIT</button> </br>
+
+</br><button onclick="getLocation()">Fetch your Cordinates</button> 
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude ;
+}
+</script>
+
+<div>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-9428dc5a-4ea0-42b0-803e-d461aaac9039"></div>
+</div>
+</body>
+</html>
+  <style>
+    button {background-color: white;
+    padding: 40%;
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 60px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    transition: background 0.3s ease-in-out;
+          }
+    </style>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
+  <section class="ajax-section">
+    <div class="container">
+      <ul class="cities"></ul>
+    </div>
+    
+  </section>
+
+  <script src="../weather/js.js"></script>
+  
+
+    
+ 
+</body>
+
+
+<footer class="page-footer">
+  <small>Made with <span>❤</span> by <a href="https://www.linkedin.com/in/rohit-kumar-69b0ab204/" target="_blank"><strong>Rohit Thakur</strong></a>
+</footer>
+
+
+</html>
+
+
